@@ -31,10 +31,7 @@ function handleText(textNode)
 {
   var v = textNode.nodeValue;
 
-  v = v.replace(/\bThoughtbot\b/g, "thoughtbot");
-  v = v.replace(/\bThoughtBot\b/g, "thoughtbot");
-  v = v.replace(/\bthought\sbot\b/g, "thoughtbot");
-  v = v.replace(/\bThought\sBot\b/g, "thoughtbot");
+  v = v.replace(/\bthought\s*bot\b/gi, "thoughtbot");
 
   textNode.nodeValue = v;
 }
